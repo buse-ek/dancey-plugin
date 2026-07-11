@@ -38,6 +38,7 @@
 *.exe
 *.out
 *.app
+*.dmg
 
 # Build directories
 build/
