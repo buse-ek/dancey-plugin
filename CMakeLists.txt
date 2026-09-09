@@ -11,6 +11,7 @@ add_subdirectory(JUCE)
 
 juce_add_plugin(DanceyPlugin
     COMPANY_NAME "Breaking & Entering"
+    BUNDLE_ID com.breakingandentering.brobot
     IS_SYNTH FALSE
     EDITOR_WANTS_KEYBOARD_FOCUS TRUE
     COPY_PLUGIN_AFTER_BUILD FALSE
@@ -34,8 +35,8 @@ juce_add_plugin(DanceyPlugin
 
 target_sources(DanceyPlugin
     PRIVATE
-        PluginEditor.cpp
-        PluginProcessor.cpp)
+        src/PluginEditor.cpp
+        src/PluginProcessor.cpp)
 
 # `target_compile_definitions` adds some preprocessor definitions to our target. In a Projucer
 # project, these might be passed in the 'Preprocessor Definitions' field. JUCE modules also make use
