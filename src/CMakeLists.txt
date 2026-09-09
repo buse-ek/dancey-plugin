@@ -32,7 +32,7 @@ juce_add_plugin(DanceyPlugin
 # Finally, we supply a list of source files that will be built into the target. This is a standard
 # CMake command.
 
-target_sources(AudioPluginExample
+target_sources(DanceyPlugin
     PRIVATE
         PluginEditor.cpp
         PluginProcessor.cpp)
@@ -44,7 +44,7 @@ target_sources(AudioPluginExample
 # definitions will be visible both to your code, and also the JUCE module code, so for new
 # definitions, pick unique names that are unlikely to collide! This is a standard CMake command.
 
-target_compile_definitions(AudioPluginExample
+target_compile_definitions(DanceyPlugin
     PUBLIC
         # JUCE_WEB_BROWSER and JUCE_USE_CURL would be on by default, but you might not need them.
         JUCE_WEB_BROWSER=0  # If you remove this, add `NEEDS_WEB_BROWSER TRUE` to the `juce_add_plugin` call
@@ -66,7 +66,7 @@ target_compile_definitions(AudioPluginExample
 # linked automatically. If we'd generated a binary data target above, we would need to link to it
 # here too. This is a standard CMake command.
 
-target_link_libraries(AudioPluginExample
+target_link_libraries(DanceyPlugin
     PRIVATE
         # AudioPluginData           # If we'd created a binary data target, we'd link to it here
         juce::juce_audio_utils
